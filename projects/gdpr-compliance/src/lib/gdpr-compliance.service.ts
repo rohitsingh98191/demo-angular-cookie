@@ -2,13 +2,13 @@ import { Inject, Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { DOCUMENT } from '@angular/common';
-import { ICookieParams, IGeoIpParams } from './demo-cookie.interface';
+import { ICookieParams, IGeoIpParams } from './gdpr-compliance.interface';
 
 /** @dynamic */
 @Injectable({
   providedIn: 'root'
 })
-export class DemoCookieService {
+export class GdprComplianceService {
   private euCountries = [
     'AT',
     'BE',

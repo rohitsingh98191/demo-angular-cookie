@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "demo-cookie": [
-        "dist/demo-cookie"
+      "gdpr-compliance": [
+        "dist/gdpr-compliance"
       ],
-      "demo-cookie/*": [
-        "dist/demo-cookie/*"
+      "gdpr-compliance/*": [
+        "dist/gdpr-compliance/*"
       ]
     }
   },

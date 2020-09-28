@@ -3,33 +3,33 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "demo-cookie": {
+    "gdpr-compliance": {
       "projectType": "library",
-      "root": "projects/demo-cookie",
-      "sourceRoot": "projects/demo-cookie/src",
+      "root": "projects/gdpr-compliance",
+      "sourceRoot": "projects/gdpr-compliance/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/demo-cookie/tsconfig.lib.json",
-            "project": "projects/demo-cookie/ng-package.json"
+            "tsConfig": "projects/gdpr-compliance/tsconfig.lib.json",
+            "project": "projects/gdpr-compliance/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/demo-cookie/src/test.ts",
-            "tsConfig": "projects/demo-cookie/tsconfig.spec.json",
-            "karmaConfig": "projects/demo-cookie/karma.conf.js"
+            "main": "projects/gdpr-compliance/src/test.ts",
+            "tsConfig": "projects/gdpr-compliance/tsconfig.spec.json",
+            "karmaConfig": "projects/gdpr-compliance/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/demo-cookie/tsconfig.lib.json",
-              "projects/demo-cookie/tsconfig.spec.json"
+              "projects/gdpr-compliance/tsconfig.lib.json",
+              "projects/gdpr-compliance/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -38,5 +38,5 @@
         }
       }
     }},
-  "defaultProject": "demo-cookie"
+  "defaultProject": "gdpr-compliance"
 }
