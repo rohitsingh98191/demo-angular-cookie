@@ -1,6 +1,6 @@
 export interface ICookieParams {
   ip_address?: string;
-  userid: string;
+  userid?: string;
   visitorid?: string;
   cookie_consent: CookieConsent;
   expiry_date?: number | Date;
@@ -8,7 +8,7 @@ export interface ICookieParams {
   productName: string ;
 }
 
-export type CookieConsent = 'cookie_opt' | 'cookie_out';
+export type CookieConsent = 'opt_in' | 'opt_out';
 
 export interface IGeoIpParams {
   city: string;

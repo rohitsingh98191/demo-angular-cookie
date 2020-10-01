@@ -28,23 +28,9 @@ describe('GdprComplianceService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should get all initialized value false', () => {
-      const service: GdprComplianceService = TestBed.get(GdprComplianceService);
-      expect(service.isCookieLibIntilized).toBeFalsy();
-      expect(service.isEuCountries).toEqual(false);
-  } );
-
-  it('should initialized a library', () => {
-    const service: GdprComplianceService = TestBed.get(GdprComplianceService);
-    service.initAnalytics();
-    expect(service.isCookieLibIntilized).toEqual(true);
-  });
-
   it('should check user is europen country', () => {
     const service: GdprComplianceService = TestBed.get(GdprComplianceService);
-    service.initAnalytics();
-    expect(service.isCookieLibIntilized).toEqual(true);
-    expect(service.isEuCountries).toEqual(false);
+    expect(service.checkwhetherEuCountries('IN')).toEqual(true);
   });
   it('should check is vistior value their in cookie', () => {
     documentMock.cookie = '__ivc=24dc54f7-a839-46c7-8201-313be6a9dae5';
@@ -62,7 +48,7 @@ describe('GdprComplianceService', () => {
     jasmine.clock().install();
     jasmine.clock().mockDate(new Date('Sun, 15 Mar 2020 10:00:00 GMT'));
     // tslint:disable-next-line: max-line-length
-    expect(service.setCookiesPolicy(service.createParams({cookie_consent: 'cookie_opt', userid: '1', productName: 'demo', expiry_date: 2})));
+    expect(service.setCookiesPolicy(service.createParams({cookie_consent: 'opt_in', userid: '1', productName: 'demo', expiry_date: 2})));
     expect(documentCookieSetterSpy).toHaveBeenCalledWith(
       // tslint:disable-next-line: max-line-length
       'privacy_policy_cookie=true;expires=Tue, 17 Mar 2020 10:00:00 GMT;path=/;domain=.researcher.life;secure;sameSite=LAX;');
