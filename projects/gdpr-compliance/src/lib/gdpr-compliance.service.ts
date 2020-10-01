@@ -85,11 +85,11 @@ export class GdprComplianceService {
   public createParams(value: ICookieParams): ICookieParams {
     return {
       ip_address: value.ip_address ? value.ip_address : null,
-      cookie_consent: value.cookie_consent,
-      productName: value.productName,
-      userid: value.userid ? value.userid : null,
+      consent_value: value.consent_value,
+      product_name: value.product_name,
+      user_id: value.user_id ? value.user_id : null,
       expiry_date: value.expiry_date ? value.expiry_date : 365,
-      visitorid: value.visitorid ? value.visitorid : this.getVisitorId,
+      bigint_visitor_id: value.bigint_visitor_id ? value.bigint_visitor_id : this.getVisitorId,
     };
   }
 

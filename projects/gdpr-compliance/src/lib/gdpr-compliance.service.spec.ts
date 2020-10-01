@@ -48,7 +48,7 @@ describe('GdprComplianceService', () => {
     jasmine.clock().install();
     jasmine.clock().mockDate(new Date('Sun, 15 Mar 2020 10:00:00 GMT'));
     // tslint:disable-next-line: max-line-length
-    expect(service.setCookiesPolicy(service.createParams({cookie_consent: 'opt_in', userid: '1', productName: 'demo', expiry_date: 2})));
+    expect(service.setCookiesPolicy(service.createParams({consent_value: 'opt_in', user_id: '1', product_name: 'demo', expiry_date: 2})));
     expect(documentCookieSetterSpy).toHaveBeenCalledWith(
       // tslint:disable-next-line: max-line-length
       'privacy_policy_cookie=true;expires=Tue, 17 Mar 2020 10:00:00 GMT;path=/;domain=.researcher.life;secure;sameSite=LAX;');

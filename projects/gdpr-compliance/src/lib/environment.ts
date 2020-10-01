@@ -1,6 +1,6 @@
 export const  environment = {
   domain: `.researcher.life`,
-  cookieUrl: `account/api`,
+  cookieUrl: `http://test3.accounts.researcher.life/api/cookie/consent`,
   policy_name: `privacy_policy_cookie`,
   euCountryList:  [
     'AT',

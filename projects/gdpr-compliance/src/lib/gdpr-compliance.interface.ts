@@ -1,11 +1,12 @@
 export interface ICookieParams {
   ip_address?: string;
-  userid?: string;
-  visitorid?: string;
-  cookie_consent: CookieConsent;
+  user_id?: string;
+  bigint_visitor_id?: string;
+  consent_value: CookieConsent;
   expiry_date?: number | Date;
   deviceid?: string;
-  productName: string ;
+  product_name: string ;
+  device_id?: string;
 }
 
 export type CookieConsent = 'opt_in' | 'opt_out';
